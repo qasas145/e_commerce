@@ -36,7 +36,7 @@ class BasketView1(APIView):
         data = {'client_secret': intent.client_secret, 
                                                             'STRIPE_PUBLISHABLE_KEY': os.environ.get('STRIPE_PUBLISHABLE_KEY')}
         return Response(data=data, status=status.HTTP_200_OK)
-
+'''
 class StripeWebhook(APIView) :
     def get(self, *args, **kwargs) :
         request = self.request
@@ -60,3 +60,4 @@ class StripeWebhook(APIView) :
             print('Unhandled event type {}'.format(event.type))
 
         return Response(status=status.HTTP_200_OK)
+'''
